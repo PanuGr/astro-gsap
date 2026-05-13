@@ -1,10 +1,9 @@
-# Astro Starter Kit: Minimal
+# GSAP, Astro & Webflow Cloud
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Astro app template with [GSAP](https://gsap.com/) loaded and ready to use, set up for Webflow Cloud. All GSAP plugins are registered and available — just import what you need from `src/lib/gsap.js`.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Deploy to Webflow](https://webflow.com/img/deploy-dark.svg)](https://webflow.com/dashboard/cloud/deploy?repo=https://github.com/cassieevans/astro-gsap)
+
 
 ## 🚀 Project Structure
 
@@ -14,6 +13,8 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   ├── lib/
+│   │   └── gsap.js        ← GSAP + plugin registration
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -40,9 +41,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-
-## Deploy to Webflow Cloud
-
-[[Deploy to Webflow](https://webflow.com/img/deploy-dark.svg)](https://webflow.com/dashboard/cloud/deploy?repo=https://github.com/cassieevans/astro-gsap)
+- [GSAP Documentation](https://gsap.com/docs/)
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord](https://astro.build/chat)
