@@ -1,0 +1,21 @@
+// Bootstrap theme overrides — map Kirikla palette onto Bootstrap's own color roles.
+// No custom tokens: every color below is a Bootstrap variable, not a new one.
+
+$primary:   #C9A227; // gold — CTAs
+$secondary: #1A2B45; // navy-mid — cards, outline surfaces
+$dark:      #08111F; // deepest — footer, darkest bg
+$body-bg:   #0F1B2E; // navy-base
+$body-color: #F4EDE0; // cream
+$link-color: #4A6B6B; // teal-dusty
+
+$font-family-sans-serif: 'Inter', sans-serif;
+$headings-font-family: 'Cormorant Garamond', serif;
+$headings-font-weight: 500;
+$headings-color: #fff;
+
+$body-line-height: 1.7;
+
+$border-radius: 4px;
+$border-radius-sm: 3px;
+
+$btn-font-weight: 600;

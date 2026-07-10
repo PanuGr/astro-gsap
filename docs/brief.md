@@ -4,8 +4,8 @@
 
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 3 — Design System (style.md written) |
-| **Current Project Mode** | Design → about to move to Build |
+| **Last Completed Phase** | Build Phase 1 — Astro components + SCSS + GSAP wired, build passes |
+| **Current Project Mode** | Build |
 | **Last Active Model** | Claude (this session) |
 
 ---
@@ -15,31 +15,39 @@
 - **Target Audience:** Hackathon judges + real-world monastery visitors/donors
 - **Primary Goal:** Support/Donate (CTA)
 - **Secondary Goals:** Visit (by arrangement), Contact
-- **Core Visual Style:** Vellum-adapted — navy (#0F1B2E) + warm gold (#C9A227) + cream (#F4EDE0), Cormorant Garamond serif + Source Sans 3 body, minimal radius, gold-dim hairline dividers
-- **Motion:** GSAP scroll-reveals, slow reverent pacing (600–900ms, power2.out), subtle hero parallax, no bounce
-- **Scope:** Single landing page only (not full multi-page site — real source copy covers 7 pages, condensed to 1)
-- **Imagery:** Real photos from user, no stock — authenticity prioritized over polish
-- **Stack:** Astro, GSAP, Webflow Cloud deploy, Bootstrap utilities, Lucide icons, SCSS
+- **Core Visual Style:** navy (#0F1B2E) + gold (#C9A227) + cream (#F4EDE0), Cormorant Garamond serif + Inter body
+- **Bootstrap mapping:** gold → `$primary`, navy-mid → `$secondary`, deepest → `$dark`/`$body-bg` override, teal → `$link-color`. No custom SCSS tokens — everything routed through Bootstrap theme vars.
+- **Motion:** single GSAP file (`src/scripts/reveal.js`), `[data-reveal]` attr-based scroll fades + hero parallax via `[data-parallax]`. No per-component JS.
+- **Scope:** Single landing page only, one `index.astro`, minimal componentization (only `LifeCard.astro` extracted — the one true repeat)
+- **Imagery:** Unsplash placeholders still in use (hero, life, donate) — swap for real photos when Panu provides them
+- **Stack:** Astro, GSAP, Bootstrap (npm + SCSS), Sass, Lucide (`@lucide/astro`) — no Facebook icon in current lucide version, used `Link` icon as stand-in for footer social link
 
 ---
 
 ## 3. Current File Registry & Manifest
 
-- [x] `docs/copy.md` — Approved (condensed 7-section copy)
-- [x] `docs/style.md` — Approved (Vellum-adapted design tokens)
-- [x] `docs/plan.md` — Approved (section order, GSAP plan, scope boundary)
-- [ ] `src/styles/_variables.scss` — Missing (Bootstrap SCSS overrides not yet written)
-- [ ] Astro components — Missing (no build started)
-- [ ] GSAP setup — Missing
-- [ ] Photos — Waiting on user upload
+- [x] `docs/copy.md`, `docs/style.md`, `docs/plan.md` — Approved
+- [x] Mockup (`prototype.jpg` + `gemini.html`) — Approved by Panu
+- [x] `src/styles/_variables.scss` — Bootstrap theme color/font overrides, no custom tokens
+- [x] `src/styles/_base.scss` — html-selector base styles (@view-transition, h1 clamp, etc.)
+- [x] `src/styles/_animations.scss` — `.btn` transitions + `[data-reveal]` will-change hook
+- [x] `src/styles/index.scss` — import entry (variables → bootstrap → base → animations) + non-utility classes (`.hero`, `.divider`, `.max-w-prose`, `.max-w-content`)
+- [x] `src/lib/gsap.js` — GSAP + ScrollTrigger only (no unused plugins)
+- [x] `src/scripts/reveal.js` — single scroll-reveal + parallax script for whole page
+- [x] `src/layouts/Layout.astro` — minimal shell
+- [x] `src/components/LifeCard.astro` — Prayer/Work/Rest card, icon via slot
+- [x] `src/pages/index.astro` — full page, real copy from `copy.md` (not mockup's trimmed text), real contact/footer details, mailto CTAs
+- [x] `npm install` + `astro build` — passes clean (only Dart Sass deprecation noise from Bootstrap internals, harmless)
+- [ ] Real photos — still Unsplash placeholders, waiting on Panu
+- [ ] Webflow Cloud deploy config — not yet set up
+- [ ] Facebook link URL — still `href="#"` placeholder
 
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
 
-1. Confirm photos ready or build with placeholder blocks first
-2. Scaffold Astro project structure (if not already initialized)
-3. Write `_variables.scss` from style.md tokens
-4. Build sections in order per plan.md, one component at a time
-5. Wire GSAP ScrollTrigger per motion plan
-6. Set up Webflow Cloud deploy config last
+1. Swap Unsplash placeholder images for real Kirikla photos when Panu uploads them
+2. Get real Facebook URL, wire into footer link
+3. Visual QA pass against `prototype.jpg` — confirm spacing/section order matches
+4. Set up Webflow Cloud deploy config
+5. Optional: verify GSAP reveal timing feels right in browser (not just build-checked — needs live visual test)

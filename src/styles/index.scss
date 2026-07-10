@@ -1,0 +1,26 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "base";
+@import "animations";
+
+.max-w-prose {
+  max-width: 65ch;
+}
+
+.max-w-content {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.divider {
+  width: 120px;
+  height: 1px;
+  background-color: shade-color($primary, 30%);
+  margin-inline: auto;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
