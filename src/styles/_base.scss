@@ -8,6 +8,16 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+  font-family: 'Verdana';
+
+}
+
+header {
+  background-image: linear-gradient(rgba(15, 27, 46, 0.75), rgba(15, 27, 46, 0.85)), url('https://images.unsplash.com/photo-1602376531381-e2bc41a27f74?fm=avif&q=10&w=1600');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {

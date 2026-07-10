@@ -1,5 +1,6 @@
 ---
 import '../styles/index.scss';
+import { Font } from "astro:assets";
 
 ---
 
@@ -9,6 +10,7 @@ import '../styles/index.scss';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>Kirikla Monastery</title>
+    <Font cssVariable="--cormorant" />
   </head>
   <body>
     <slot />
