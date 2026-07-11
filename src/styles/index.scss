@@ -1,17 +1,15 @@
 @import "variables";
 @import "bootstrap/scss/bootstrap";
-@import "base";
 @import "animations";
+@import "base";
 
 .max-w-prose {
   max-width: 65ch;
 }
-
 .max-w-content {
   max-width: 900px;
   margin-inline: auto;
 }
-
 .divider {
   width: 120px;
   height: 1px;
@@ -19,8 +17,57 @@
   margin-inline: auto;
 }
 
+// Surfaces: Light-shaft oculus overlay
 .hero {
+  background-image: linear-gradient(rgba(15, 27, 46, 0.75), rgba(15, 27, 46, 0.85)), url('https://images.unsplash.com/photo-1602376531381-e2bc41a27f74?fm=avif&q=10&w=1600');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    // Base navy to soft gold shaft back to navy
+    background: linear-gradient(135deg, rgba($body-bg, 0.9) 0%, rgba($primary, 0.15) 50%, rgba($body-bg, 0.9) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
+}
+
+// Surfaces: Section Header Halos
+h2[data-reveal-halo] {
+  position: relative;
+  display: inline-block;
+  --halo-opacity: 0; // GSAP transition hook
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 150%;
+    background: radial-gradient(circle, rgba($primary, 0.08) 0%, transparent 65%);
+    z-index: -1;
+    opacity: var(--halo-opacity);
+    pointer-events: none;
+    border-radius: 100%;
+  }
+}
+
+// Surfaces: Stained-glass & Candlelight[cite: 2]
+.stained-glass {
+  background-color: rgba($secondary, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba($primary, 0.2);
+}
+
+.gold-glass {
+  background-color: rgba($primary, 0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba($primary, 0.2) !important;
 }
