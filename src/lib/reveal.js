@@ -82,6 +82,35 @@ function initScrambleText() {
   });
 }
 
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const mm = gsap.matchMedia();
+
+  mm.add('(prefers-reduced-motion: no-preference)', () => {
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: 'top -300',
+      onEnter: () => gsap.to(btn, { autoAlpha: 1, duration: 0.3, ease: 'power2.out', overwrite: 'auto' }),
+      onLeaveBack: () => gsap.to(btn, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: 'auto' }),
+    });
+  });
+
+  mm.add('(prefers-reduced-motion: reduce)', () => {
+    const toggle = () => btn.classList.toggle('visible', window.scrollY > 300);
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    return () => window.removeEventListener('scroll', toggle);
+  });
+
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 revealOnScroll();
 initSurfaces();
 initScrambleText();
+initBackToTop();

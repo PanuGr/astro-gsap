@@ -41,3 +41,5 @@
 - [x] `src/components/LifeCard.astro` — Prayer/Work/Rest card (inherits 3D tilt via `.stained-glass`)
 - [x] `src/pages/index.astro` — full page. Donate section now includes interactive candle game (candle + stand) and hidden donate button revealed only after candle is lit. Stat numbers wrapped in `[data-scramble]` spans. LifeCards row and donate column get `.perspective-parent` for 3D tilt.
 - [x] `npm install` + `astro build` — passes clean
+
+---

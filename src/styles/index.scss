@@ -121,8 +121,8 @@ h2[data-reveal-halo] {
 .cs-holder {
   position: absolute;
   top: 0;
-  left: calc(50% - 15px);
-  width: 30px;
+  left: calc(50% - 25px);
+  width: 50px;
   height: 12px;
   background: linear-gradient(to bottom, #B8860B, #DAA520);
   border-radius: 3px 3px 1px 1px;
@@ -155,20 +155,20 @@ h2[data-reveal-halo] {
 }
 .cs-target {
   position: absolute;
-  left: calc(50% - 12px);
+  left: calc(50% - 22px);
   top: 20px;
-  width: 24px;
+  width: 44px;
   height: 56px;
   pointer-events: none;
   opacity: 0;
 }
 .cs-candle {
   position: absolute;
-  left: calc(50% + 35px);
+  left: calc(50% + 50px);
   top: 84px;
-  width: 24px;
+  width: 44px;
   height: 56px;
-  background: linear-gradient(to right, #FFF8DC, #FAEBD7, #FFF8DC);
+  background: linear-gradient(to right, #FFF8DC, #EED9C4, #FFF8DC);
   border-radius: 3px 3px 1px 1px;
   cursor: grab;
   z-index: 10;
@@ -214,4 +214,25 @@ h2[data-reveal-halo] {
 }
 .cs-done {
   font-size: 0.85rem;
+}
+
+// Back to top
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1020;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }

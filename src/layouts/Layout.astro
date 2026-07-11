@@ -1,7 +1,6 @@
 ---
-import '../styles/index.scss';
+import "../styles/index.scss";
 import { Font } from "astro:assets";
-
 ---
 
 <html lang="en">
@@ -13,6 +12,10 @@ import { Font } from "astro:assets";
     <Font cssVariable="--cormorant" />
   </head>
   <body>
+    <a href="#main-content" class="visually-hidden-focusable"
+      >Skip to main content</a
+    >
+
     <slot />
   </body>
 </html>

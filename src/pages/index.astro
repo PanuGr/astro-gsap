@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LifeCard from '../components/LifeCard.astro';
-import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
+import { BookOpen, Hammer, Moon, Mail, Link, ArrowUp } from '@lucide/astro';
 ---
 
 <Layout>
@@ -35,7 +35,7 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
 
     <div class="divider"></div>
 
-    <section id="history" class="py-5 my-4 text-center" data-reveal>
+    <section id="history" class="py-5 my-4 text-center lh-lg" data-reveal>
       <h2 class="display-2 mb-4" data-reveal-halo>Our History</h2>
       <p class="text-start">
         For centuries, the Petseri (Pskov-Pechory) Monastery served as the spiritual center of Estonia's Orthodox
@@ -143,7 +143,7 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
             </p>
           </div>
 
-          <div class="candle-game mt-4 mb-3">
+          <div class="candle-game mt-4 mb-3" aria-hidden="true">
             <p class="small text-primary mb-2" id="candle-prompt">Drag the candle onto the stand to light it</p>
             <div class="candle-stage">
               <div class="cs-stand" id="cs-stand">
@@ -161,7 +161,7 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
             </div>
             <p class="small text-primary cs-done d-none text-center" id="candle-lit-msg">Your light burns for the brotherhood</p>
           </div>
-          <a href="#" id="donate-btn" class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto d-none">Donate Now</a>
+          <a href="/" id="donate-btn" class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto">Donate Now</a>
         </div>
         <div class="col-lg-6">
           <img
@@ -180,17 +180,21 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
     <div class="container max-w-content py-4">
       <div class="row g-4">
         <div class="col-md-6">
-          <h2 class="h4 mb-3">Kirikla Monastery</h2>
+          <h2 class="mb-3">Kirikla Monastery</h2>
           <address class="small fst-normal opacity-75 mb-3">
             Eesti Apostlik-Õigeusu Kiriku Püha Mäe Isade Püha Klooster Kiriklas<br />Estonia
           </address>
-          <a href="https://www.facebook.com/profile.php?id=61585727948362" class="text-decoration-none small d-inline-flex align-items-center gap-2">
+          <a href="https://www.facebook.com/profile.php?id=61585727948362" class="text-decoration-none small d-inline-flex align-items-center gap-2 text-muted">
             <Link size={16} /> Follow Kirikla Monastery on Facebook
           </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <a href="#" id="back-to-top" class="btn btn-primary back-to-top" aria-label="Back to top">
+    <ArrowUp size={20} />
+  </a>
 
   <script>
     import '../lib/reveal.js';
