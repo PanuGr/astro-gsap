@@ -1,34 +1,16 @@
-Plan below, per plugin, no code.
-
 **Surfaces (glass/gradient)**
-Skip generic SaaS glass look — reframe as light-through-glass/gilding:
-- Prayer/Work/Rest cards: backdrop-blur + thin gold-dim border → stained-glass read, not UI chrome
-- Radial gold-glow behind section headers, fires on scroll-in → halo, not decoration
-- Hero: slow-shifting light-shaft gradient overlay (CSSRulePlugin animating a ::before gradient) → dome-oculus feel
-- Donate cards: gold-tint glass → candlelight-on-gold
 
 **Interactions (hover)**
-- Buttons: gold border draws in on hover via DrawSVGPlugin (traces like halo) — not scale/shadow bounce
-- Cards: lift + soft gold glow, title underline draws in (DrawSVGPlugin)
-- Dividers: draw themselves in on scroll (DrawSVGPlugin stroke reveal) instead of fade → illuminated-manuscript linework feel
-- Donate CTA: slow gold glow pulse, candle-flicker rate not urgent-button rate
 
 **Parallax**
-Got basic hero bg parallax already. Upgrade:
-- ScrollSmoother → whole-page buttery scroll + built-in speed-based parallax layers (plugin's registered, just unused)
-- 3-layer hero depth: bg image slow, silhouette/arch layer mid, title fastest
-- Life/Donate images drift as they pass, not static fade-in
 
 **Morphing shapes**
-Not nice. Deleted.
 
 **3D**
-CSS 3D: cards tilt toward cursor (quickTo mouse-follow), dome/arch SVG slight rotateY on scroll-approach → 3D feel near-zero cost.
 
 **Full library, tie-together picks**
-- ScrambleTextPlugin: small flourish on stat numbers only (2025, 40km) — resist overuse
 
-**Signature moment (biggest swing, highest build cost)**
-Donate section: drag candle → drop on stand → flame ignites, flickers (Physics2D wobble, InertiaPlugin on the drag). Real Orthodox practice, not generic gimmick. Draggable + Inertia + Physics2D in one moment, right before the ask — sticks in judges' memory.
+**Signature moment**
 
-One non-negotiable: prefers-reduced-motion respected (drop parallax/morph/physics, keep instant fades) — bake in later, not optional.
+
+**One non-negotiable:** prefers-reduced-motion respected (drop parallax/morph/physics, keep instant fades) — bake in later, not optional.

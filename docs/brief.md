@@ -4,9 +4,9 @@
 
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Build Phase 2 — Visual Enhancements (Surfaces, Interactions, Native Parallax) |
+| **Last Completed Phase** | Build Phase 3 — 3D, ScrambleText, Signature Candle Moment |
 | **Current Project Mode** | Build |
-| **Last Active Model** | Antigravity (this session) |
+| **Last Active Model** | DeepSeek v4 Flash |
 
 ---
 
@@ -26,21 +26,18 @@
 
 ## 3. Current File Registry & Manifest
 
-- [x] `docs/copy.md`, `docs/style.md`, `docs/plan.md`, `docs/visuals.md` — Visuals plan in progress (Surfaces, Interactions, Parallax completed)
+- [x] `docs/copy.md`, `docs/style.md`, `docs/plan.md`, `docs/visuals.md` — Visuals plan: Surfaces, Interactions, Parallax, ScrambleText, 3D tilt and scroll-rotateY completed. Morphing shapes attempted but discarded (CSS clip-path approach not satisfactory). Signature candle moment completed.
 - [x] Mockup (`prototype.jpg` + `gemini.html`) — Approved by Panu
 - [x] `src/styles/_variables.scss` — Bootstrap theme color/font overrides, no custom tokens
 - [x] `src/styles/_base.scss` — html-selector base styles (@view-transition, h1 clamp, etc.)
-- [x] `src/styles/_animations.scss` — `.btn` transitions, `[data-reveal]`, button halo traces, card lifts, and candle pulse keyframes
-- [x] `src/styles/index.scss` — import entry + non-utility classes. Includes `.hero-bg`, `.hero-arch`, and pure CSS `@keyframes` light-shaft for zero-JS lag.
-- [x] `src/lib/gsap.js` — GSAP + ScrollTrigger only (no unused plugins)
-- [x] `src/lib/reveal.js` — Scroll-reveal animations + halos
+- [x] `src/styles/_animations.scss` — `.btn` transitions, `[data-reveal]`, button halo traces, card lifts, `transform-style: preserve-3d` on cards, and candle pulse keyframes
+- [x] `src/styles/index.scss` — import entry + non-utility classes. Includes `.hero-bg`, `.hero-arch`, `perspective` on hero, `.perspective-parent` for 3D tilt, `.candle-game`/`.cs-*` candle scene styling
+- [x] `src/lib/gsap.js` — GSAP + ScrollTrigger + ScrambleTextPlugin registered
+- [x] `src/lib/reveal.js` — Scroll-reveal animations, halos, `[data-scramble]` text scrambling
 - [x] `src/lib/parallax.js` — Custom `requestAnimationFrame` loop handling native, buttery 3-layer parallax and drifting images
-- [x] `src/layouts/Layout.astro` — minimal shell, now supports `fixed-background` slot for the curtain reveal pattern
-- [x] `src/components/LifeCard.astro` — Prayer/Work/Rest card
-- [x] `src/pages/index.astro` — full page, structural 3-layer hero depth, and native-parallax tracking
+- [x] `src/lib/tilt3d.js` — 3D card tilt on mouse-follow (`.stained-glass`, `.gold-glass`) via GSAP `quickTo`; hero `.hero-arch` subtle `rotateY` on scroll scrub
+- [x] `src/lib/candle.js` — Signature moment: Draggable + InertiaPlugin candle drag, drop-detection via hidden `#cs-target`, snap + settle wobble, flame ignition with Physics2DPlugin flicker, hidden donate button revealed on completion
+- [x] `src/layouts/Layout.astro` — minimal shell
+- [x] `src/components/LifeCard.astro` — Prayer/Work/Rest card (inherits 3D tilt via `.stained-glass`)
+- [x] `src/pages/index.astro` — full page. Donate section now includes interactive candle game (candle + stand) and hidden donate button revealed only after candle is lit. Stat numbers wrapped in `[data-scramble]` spans. LifeCards row and donate column get `.perspective-parent` for 3D tilt.
 - [x] `npm install` + `astro build` — passes clean
----
-
-## 4. Immediate Next Steps for the Incoming Model
-
-1. Continue with `docs/visuals.md` plan: implement the **Morphing shapes** and **3D** section enhancements.
