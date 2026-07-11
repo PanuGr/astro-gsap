@@ -13,6 +13,7 @@ function initCandleGame() {
   const glow = document.getElementById('cs-glow');
   const prompt = document.getElementById('candle-prompt');
   const msg = document.getElementById('candle-lit-msg');
+  const donateBtn = document.getElementById('donate-btn');
   if (!candle || !target) return;
 
   let lit = false;
@@ -33,7 +34,7 @@ function initCandleGame() {
     draggable = Draggable.create(candle, {
       type: 'x,y',
       edgeResistance: 0.65,
-      bounds: { minX: -120, maxX: 80, minY: -150, maxY: 20 },
+      bounds: { minX: -70, maxX: 30, minY: -80, maxY: 20 },
       inertia: true,
       onDragEnd: checkDrop,
     })[0];
@@ -73,6 +74,10 @@ function initCandleGame() {
 
     if (prompt) prompt.classList.add('d-none');
     if (msg) msg.classList.remove('d-none');
+    if (donateBtn) {
+      donateBtn.classList.remove('d-none');
+      gsap.fromTo(donateBtn, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.4 });
+    }
   }
 
   function startFlicker() {
