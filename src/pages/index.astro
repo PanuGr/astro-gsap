@@ -113,12 +113,6 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
         surroundings, or simply rest for a while. The monastery does not yet have regular opening hours, but we are
         always glad to welcome visitors by prior arrangement.
       </p>
-      <a
-        href="#"
-        class="text-decoration-none d-inline-flex align-items-center gap-2 fw-semibold"
-      >
-        <Mail size={18} /> email@gmail.com
-      </a>
     </section>
   </main>
 
@@ -149,6 +143,24 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
             </p>
           </div>
 
+          <div class="candle-game mt-4 mb-3">
+            <p class="small text-primary mb-2" id="candle-prompt">Drag the candle onto the stand to light it</p>
+            <div class="candle-stage">
+              <div class="cs-stand" id="cs-stand">
+                <div class="cs-holder"></div>
+                <div class="cs-stem"></div>
+                <div class="cs-ring"></div>
+                <div class="cs-base"></div>
+              </div>
+              <div class="cs-target" id="cs-target"></div>
+              <div class="cs-candle" id="cs-candle">
+                <div class="cs-flame" id="cs-flame"></div>
+                <div class="cs-glow" id="cs-glow"></div>
+                <div class="cs-wick"></div>
+              </div>
+            </div>
+            <p class="small text-success mt-2 cs-done d-none" id="candle-lit-msg">Your light burns for the brotherhood</p>
+          </div>
           <a href="#" class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto">Donate Now</a>
         </div>
         <div class="col-lg-6">
@@ -176,16 +188,6 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
             <Link size={16} /> Follow Kirikla Monastery on Facebook
           </a>
         </div>
-        <div class="col-md-6 text-md-end">
-          <p class="small opacity-75 mb-2">
-            <strong>Abbot:</strong> His Grace, Bishop Damaskinos of Haapsalu
-            <a href="#" class="text-decoration-none">email@email.com</a>
-          </p>
-          <p class="small opacity-75 mb-0">
-            <strong>Languages spoken:</strong><br />
-            Estonian, Finnish, Swedish, Greek, English, German, French
-          </p>
-        </div>
       </div>
     </div>
   </footer>
@@ -194,5 +196,6 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
     import '../lib/reveal.js';
     import '../lib/parallax.js';
     import '../lib/tilt3d.js';
+    import '../lib/candle.js';
   </script>
 </Layout>
