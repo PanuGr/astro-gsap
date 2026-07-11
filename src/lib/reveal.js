@@ -10,23 +10,6 @@ export function initSurfaces() {
   // Enforce prefers-reduced-motion check[cite: 2]
   mm.add("(prefers-reduced-motion: no-preference)", () => {
     
-    // 1. Hero light-shaft overlay via CSSRulePlugin[cite: 2]
-    // ponytail: CSSRulePlugin can occasionally struggle with bundled/minified selectors in Astro prod builds. 
-    // Upgrade path: If it breaks in deployment, animate a CSS custom property natively on the .hero element instead.
-    const heroRule = CSSRulePlugin.getRule(".hero::before");
-    if (heroRule) {
-      gsap.to(heroRule, {
-        cssRule: { backgroundPosition: "100% 50%" },
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true
-        }
-      });
-    }
-
     // 2. Section Halos around each Header
     const halos = document.querySelectorAll('[data-reveal-halo]');
     halos.forEach(halo => {

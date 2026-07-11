@@ -6,10 +6,11 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
 
 <Layout>
   <header
-    class="hero min-vh-100 d-flex flex-column justify-content-center text-center px-3 position-relative"
-    data-parallax
+    class="hero min-vh-100 d-flex flex-column justify-content-center text-center px-3 position-relative overflow-hidden"
   >
-    <div class="container position-relative">
+    <div class="hero-bg native-parallax" data-speed="0.4"></div>
+    <div class="hero-arch native-parallax" data-speed="0.1"></div>
+    <div class="container position-relative z-3 native-parallax" data-speed="-0.2">
       <h1 class="display-1" data-reveal>Kirikla Monastery</h1>
       <h2 class="display-6" data-reveal>The only Orthodox men's monastery in Estonia</h2>
       <p class="lead py-3 max-w-prose mx-auto" data-reveal>
@@ -68,8 +69,9 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
       <img
         src="https://images.unsplash.com/photo-1627573897879-1eff66f2c228?fm=jpg&q=80&w=1600&auto=format&fit=crop"
         alt="Cathedral interior with gilded icons"
-        class="img-fluid rounded w-100 object-fit-cover mb-5"
+        class="img-fluid rounded w-100 object-fit-cover mb-5 native-parallax"
         style="max-height: 400px;"
+        data-speed="0.1"
       />
 
       <div class="row g-4 mb-5 text-start">
@@ -153,8 +155,9 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
           <img
             src="https://images.unsplash.com/photo-1601231656153-73aa7f115365?fm=jpg&q=80&w=1600&auto=format&fit=crop"
             alt="Lit candles before an icon"
-            class="img-fluid rounded w-100 object-fit-cover shadow-lg"
+            class="img-fluid rounded w-100 object-fit-cover shadow-lg native-parallax"
             style="min-height: 400px;"
+            data-speed="0.1"
           />
         </div>
       </div>
@@ -189,5 +192,6 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
 
   <script>
     import '../lib/reveal.js';
+    import '../lib/parallax.js';
   </script>
 </Layout>
