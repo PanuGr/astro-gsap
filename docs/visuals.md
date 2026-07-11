@@ -20,11 +20,10 @@ Got basic hero bg parallax already. Upgrade:
 - Life/Donate images drift as they pass, not static fade-in
 
 **Morphing shapes**
-MorphSVGPlugin on one recurring motif — cross ↔ dome outline ↔ candle-flame — morphs at scroll milestones, threads whole page together. Rare plugin, strong "knows GSAP" signal for judges.
+Not nice. Deleted.
 
 **3D**
-True WebGL 3D (three.js) not in stack, real weight for one page → skip.
-CSS 3D instead: cards tilt toward cursor (quickTo mouse-follow), dome/arch SVG slight rotateY on scroll-approach → 3D feel near-zero cost.
+CSS 3D: cards tilt toward cursor (quickTo mouse-follow), dome/arch SVG slight rotateY on scroll-approach → 3D feel near-zero cost.
 
 **Full library, tie-together picks**
 - SplitText: hero headline reveals word-by-word, staggered, slow → reads like spoken liturgy, not fade-block

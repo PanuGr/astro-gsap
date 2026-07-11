@@ -74,7 +74,7 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
         data-speed="0.1"
       />
 
-      <div class="row g-4 mb-5 text-start">
+      <div class="row g-4 mb-5 text-start perspective-parent">
         <div class="col-md-4">
           <LifeCard title="Prayer">
             <BookOpen slot="icon" size={20} />
@@ -193,5 +193,6 @@ import { BookOpen, Hammer, Moon, Mail, Link } from '@lucide/astro';
   <script>
     import '../lib/reveal.js';
     import '../lib/parallax.js';
+    import '../lib/tilt3d.js';
   </script>
 </Layout>

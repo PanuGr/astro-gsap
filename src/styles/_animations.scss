@@ -38,6 +38,7 @@
 .stained-glass, .gold-glass {
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
   will-change: transform, box-shadow;
+  transform-style: preserve-3d;
 }
 
 .stained-glass:hover, .gold-glass:hover {

@@ -81,6 +81,11 @@ h2[data-reveal-halo] {
   }
 }
 
+// 3D perspective container for card tilt
+.perspective-parent {
+  perspective: 800px;
+}
+
 // Surfaces: Stained-glass & Candlelight[cite: 2]
 .stained-glass {
   background-color: rgba($secondary, 0.4);
