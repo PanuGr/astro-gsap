@@ -1,4 +1,4 @@
-export function initNativeParallax() {
+function initNativeParallax() {
   const elements = Array.from(document.querySelectorAll('.native-parallax')).map(el => {
     return { 
       el, 

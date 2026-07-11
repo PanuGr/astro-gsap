@@ -4,7 +4,7 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 
 gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
 
-export function initSurfaces() {
+function initSurfaces() {
   const mm = gsap.matchMedia();
 
   // Enforce prefers-reduced-motion check[cite: 2]
@@ -26,7 +26,7 @@ export function initSurfaces() {
   });
 }
 
-export function revealOnScroll() {
+function revealOnScroll() {
   const reveals = document.querySelectorAll('[data-reveal]');
   reveals.forEach(el => {
     gsap.fromTo(el,

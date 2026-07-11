@@ -9,7 +9,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate": "html-validate dist/",
+    "fallow": "fallow"
   },
   "dependencies": {
     "@lucide/astro": "^1.24.0",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
-    "fallow": "^2.104.0"
+    "fallow": "^2.104.0",
+    "html-validate": "^11.5.5"
   }
 }

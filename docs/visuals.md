@@ -37,7 +37,4 @@ CSS 3D instead: cards tilt toward cursor (quickTo mouse-follow), dome/arch SVG s
 **Signature moment (biggest swing, highest build cost)**
 Donate section: drag candle → drop on stand → flame ignites, flickers (Physics2D wobble, InertiaPlugin on the drag). Real Orthodox practice, not generic gimmick. Draggable + Inertia + Physics2D in one moment, right before the ask — sticks in judges' memory.
 
-**Watch vs style.md**
-style.md says: no bounce, no bright color outside gold, restraint over decoration. Everything above stays inside that — glow/glass/morph all navy+gold, eases stay slow/power-based not elastic. Wow comes from technical depth + thematic tightness, not saturation/bounce. Flagging so it's a call, not accident.
-
 One non-negotiable: prefers-reduced-motion respected (drop parallax/morph/physics, keep instant fades) — bake in later, not optional.
