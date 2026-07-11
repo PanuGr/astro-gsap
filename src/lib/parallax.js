@@ -12,13 +12,8 @@ function initNativeParallax() {
   function calculateCenters() {
     elements.forEach(item => item.el.style.transform = 'none');
     elements.forEach(item => {
-      let top = 0;
-      let current = item.el;
-      while (current) {
-        top += current.offsetTop;
-        current = current.offsetParent;
-      }
-      item.initialCenter = top + (item.el.offsetHeight / 2);
+      const rect = item.el.getBoundingClientRect();
+      item.initialCenter = rect.top + window.scrollY + (rect.height / 2);
     });
   }
 

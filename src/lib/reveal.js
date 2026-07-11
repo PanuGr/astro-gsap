@@ -1,9 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 
-gsap.registerPlugin(ScrollTrigger, CSSRulePlugin, ScrambleTextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
 function initSurfaces() {
   const mm = gsap.matchMedia();
@@ -98,7 +97,7 @@ function initBackToTop() {
   });
 
   mm.add('(prefers-reduced-motion: reduce)', () => {
-    const toggle = () => btn.classList.toggle('visible', window.scrollY > 300);
+    const toggle = () => gsap.set(btn, { autoAlpha: window.scrollY > 300 ? 1 : 0 });
     window.addEventListener('scroll', toggle, { passive: true });
     toggle();
     return () => window.removeEventListener('scroll', toggle);

@@ -1,7 +1,4 @@
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function initCardTilt() {
   const cards = document.querySelectorAll('.stained-glass, .gold-glass');

@@ -1,16 +1,11 @@
 // CSS-side companions for GSAP ScrollTrigger reveals.
 // GSAP sets initial state via .js; these are the transition/easing hooks JS drives.
-
-.btn {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
 [data-reveal] {
   will-change: opacity, transform;
 }
 
-/* Interactions: Buttons */
 .btn {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   position: relative;
   /* Ensure hover transition doesn't clip ::before */
   z-index: 1;
@@ -35,13 +30,15 @@
 }
 
 /* Interactions: Cards */
-.stained-glass, .gold-glass {
+.stained-glass,
+.gold-glass {
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
   will-change: transform, box-shadow;
   transform-style: preserve-3d;
 }
 
-.stained-glass:hover, .gold-glass:hover {
+.stained-glass:hover,
+.gold-glass:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba($primary, 0.15);
 }
@@ -49,7 +46,8 @@
 /* Interactions: Card Title Underline */
 .card-title {
   position: relative;
-  display: inline-flex; /* or inline-block to shrink wrap */
+  display: inline-flex;
+  /* or inline-block to shrink wrap */
 }
 
 .card-title::after {
@@ -72,8 +70,15 @@
 
 /* Interactions: Donate Pulse */
 @keyframes candle-pulse {
-  0%, 100% { box-shadow: 0 0 15px rgba($primary, 0.2); }
-  50%      { box-shadow: 0 0 30px rgba($primary, 0.5); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba($primary, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba($primary, 0.5);
+  }
 }
 
 .pulse-btn {
