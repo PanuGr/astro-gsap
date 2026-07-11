@@ -39,10 +39,6 @@
 - [x] `src/components/LifeCard.astro` — Prayer/Work/Rest card
 - [x] `src/pages/index.astro` — full page, structural 3-layer hero depth, and native-parallax tracking
 - [x] `npm install` + `astro build` — passes clean
-- [ ] Real photos — still Unsplash placeholders, waiting on Panu
-- [ ] Webflow Cloud deploy config — not yet set up
-- [ ] Facebook link URL — placeholder replaced? (Current: Facebook link is in)
-
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
