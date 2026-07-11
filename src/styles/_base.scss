@@ -10,3 +10,18 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: Verdana, system-ui;
 }
+
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+.visually-hidden-focusable {
+  width: fit-content;
+  position: absolute;
+  top: 10vh;
+  left: 1rem;
+  padding: 10px;
+  color: white;
+  z-index: 1;
+}
