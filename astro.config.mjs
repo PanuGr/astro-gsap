@@ -6,10 +6,9 @@ export default defineConfig({
   prefetch: true,
   fonts: [
     {
-      name: "Cormorant Garamond",
-      cssVariable: "--cormorant",
+      name: "Fraunces",
+      cssVariable: "--headings",
       provider: fontProviders.google(),
-      weights: [400, 500, 600]
     }
   ],
   vite: {
