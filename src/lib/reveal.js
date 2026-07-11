@@ -60,6 +60,22 @@ export function revealOnScroll() {
       }
     );
   });
+
+  const dividers = document.querySelectorAll('.divider');
+  dividers.forEach(div => {
+    gsap.fromTo(div,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: div,
+          start: "top 85%",
+        }
+      }
+    );
+  });
 }
 
 revealOnScroll();
