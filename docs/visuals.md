@@ -26,12 +26,7 @@ Not nice. Deleted.
 CSS 3D: cards tilt toward cursor (quickTo mouse-follow), dome/arch SVG slight rotateY on scroll-approach → 3D feel near-zero cost.
 
 **Full library, tie-together picks**
-- SplitText: hero headline reveals word-by-word, staggered, slow → reads like spoken liturgy, not fade-block
-- CustomEase: one signature reverent ease curve, used everywhere instead of default power2.out → distinct motion signature
 - ScrambleTextPlugin: small flourish on stat numbers only (2025, 40km) — resist overuse
-- Draggable + InertiaPlugin + Physics2DPlugin → signature moment below
-- Flip, PixiPlugin, EaselPlugin → skip. Canvas/WebGL-heavy or no real content moment fits — plugin-for-plugin's-sake otherwise
-- GSDevTools → dev-only, tune timing during build, never ships
 
 **Signature moment (biggest swing, highest build cost)**
 Donate section: drag candle → drop on stand → flame ignites, flickers (Physics2D wobble, InertiaPlugin on the drag). Real Orthodox practice, not generic gimmick. Draggable + Inertia + Physics2D in one moment, right before the ask — sticks in judges' memory.

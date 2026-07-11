@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
+import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 
-gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
+gsap.registerPlugin(ScrollTrigger, CSSRulePlugin, ScrambleTextPlugin);
 
 function initSurfaces() {
   const mm = gsap.matchMedia();
@@ -61,5 +62,26 @@ function revealOnScroll() {
   });
 }
 
+function initScrambleText() {
+  const els = document.querySelectorAll('[data-scramble]');
+  if (!els.length) return;
+
+  const mm = gsap.matchMedia();
+  mm.add('(prefers-reduced-motion: no-preference)', () => {
+    els.forEach(el => {
+      gsap.to(el, {
+        scrambleText: { text: el.getAttribute('data-scramble'), chars: '0123456789', revealDelay: 0.5 },
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+        },
+      });
+    });
+  });
+}
+
 revealOnScroll();
 initSurfaces();
+initScrambleText();
