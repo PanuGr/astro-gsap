@@ -16,7 +16,7 @@
 - **Target Audience:** Hackathon judges + real-world monastery visitors/donors
 - **Primary Goal:** Support/Donate (CTA)
 - **Secondary Goals:** Visit (by arrangement), Contact
-- **Core Visual Style:** navy (#0F1B2E) + gold (#C9A227) + cream (#F4EDE0), Cormorant Garamond serif + Inter body
+- **Core Visual Style:** navy (#0F1B2E) + gold (#C9A227) + cream (#F4EDE0), Fraunces + Verdana body
 - **Bootstrap mapping:** gold → `$primary`, navy-mid → `$secondary`, deepest → `$dark`/`$body-bg` override, teal → `$link-color`. No custom SCSS tokens — everything routed through Bootstrap theme vars.
 - **Motion & Parallax:** Custom RAF parallax (`parallax.js`), GSAP reveals (`reveal.js`), 3D tilt (`tilt3d.js`), candle drag (`candle.js`)
 - **Scope:** Single landing page only, one `index.astro`, minimal componentization (only `LifeCard.astro` extracted)

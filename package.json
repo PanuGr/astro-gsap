@@ -8,10 +8,7 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "validate": "html-validate dist/",
-    "fallow": "fallow"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@lucide/astro": "^1.24.0",
@@ -22,8 +19,6 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^8.0.0",
-    "fallow": "^2.104.0",
-    "html-validate": "^11.5.5"
+    "@fullhuman/postcss-purgecss": "^8.0.0"
   }
 }

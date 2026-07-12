@@ -6,15 +6,13 @@ function initCursor() {
 
   const mm = gsap.matchMedia();
 
-  // Desktop-only (pointer: fine) and no reduced motion
   mm.add('(pointer: fine) and (prefers-reduced-motion: no-preference)', () => {
-    // Show the cursor, hide the default cursor on body
     gsap.set(cursor, { autoAlpha: 1 });
     document.body.style.cursor = 'none';
 
     // Use quickTo for high-performance following (same pattern as tilt3d.js)
-    const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power2.out" });
-    const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power2.out" });
+    const xTo = gsap.quickTo(cursor, 'x', { duration: 0.15, ease: 'power2.out' });
+    const yTo = gsap.quickTo(cursor, 'y', { duration: 0.15, ease: 'power2.out' });
 
     const moveCursor = (e) => {
       // Offset by half width/height (10px) to center on cursor
@@ -24,11 +22,10 @@ function initCursor() {
 
     window.addEventListener('mousemove', moveCursor, { passive: true });
 
-    // Interactive elements hover state
     const interactives = document.querySelectorAll('a, button');
     
-    const onEnter = () => gsap.to(cursor, { scale: 1.5, duration: 0.2, ease: "power2.out" });
-    const onLeave = () => gsap.to(cursor, { scale: 1, duration: 0.2, ease: "power2.out" });
+    const onEnter = () => gsap.to(cursor, { scale: 1.5, duration: 0.2, ease: 'power2.out' });
+    const onLeave = () => gsap.to(cursor, { scale: 1, duration: 0.2, ease: 'power2.out' });
 
     interactives.forEach(el => {
       el.addEventListener('mouseenter', onEnter);
