@@ -6,10 +6,12 @@
 .max-w-prose {
   max-width: 65ch;
 }
+
 .max-w-content {
   max-width: 900px;
   margin-inline: auto;
 }
+
 .divider {
   width: 120px;
   height: 1px;
@@ -19,8 +21,15 @@
 
 // Surfaces: Light-shaft oculus overlay
 @keyframes light-shaft {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-50%); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
 }
 
 .hero {
@@ -49,8 +58,15 @@
 
 // Ambient drift — slow idle movement before user scrolls (same technique as light-shaft)
 @keyframes hero-drift {
-  0%, 100% { transform: scale(1) translate(0, 0); }
-  50%      { transform: scale(1.03) translate(-0.5%, 0.3%); }
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.03) translate(-0.5%, 0.3%);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -93,6 +109,20 @@ h2[data-reveal-halo] {
   }
 }
 
+// Stat callout blocks — large gold numeral + small caption
+.stat-block {
+  .scramble-text {
+    display: block;
+    font-family: var(--headings);
+    font-weight: $headings-font-weight;
+  }
+
+  small {
+    display: block;
+    opacity: 0.75;
+  }
+}
+
 // 3D perspective container for card tilt
 .perspective-parent {
   perspective: 800px;
@@ -115,6 +145,7 @@ h2[data-reveal-halo] {
 .candle-game {
   user-select: none;
 }
+
 .candle-stage {
   position: relative;
   width: 100%;
@@ -122,6 +153,7 @@ h2[data-reveal-halo] {
   max-width: 320px;
   margin-inline: auto;
 }
+
 .cs-stand {
   position: absolute;
   left: calc(50% - 34px);
@@ -131,6 +163,7 @@ h2[data-reveal-halo] {
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
 }
+
 .cs-holder {
   position: absolute;
   top: 0;
@@ -141,6 +174,7 @@ h2[data-reveal-halo] {
   border-radius: 4px 4px 1px 1px;
   border: 1px solid #8B6914;
 }
+
 .cs-stem {
   position: absolute;
   top: 16px;
@@ -149,6 +183,7 @@ h2[data-reveal-halo] {
   height: 58px;
   background: linear-gradient(to right, #8B6914, #E5B94A 50%, #8B6914);
 }
+
 .cs-ring {
   position: absolute;
   top: 36px;
@@ -159,6 +194,7 @@ h2[data-reveal-halo] {
   border-radius: 3px;
   border: 1px solid #8B6914;
 }
+
 .cs-base {
   position: absolute;
   top: 74px;
@@ -168,6 +204,7 @@ h2[data-reveal-halo] {
   background: linear-gradient(to bottom, #B8860B, #6B4E10);
   border-radius: 4px;
 }
+
 .cs-target {
   position: absolute;
   left: calc(50% - 27px);
@@ -177,6 +214,7 @@ h2[data-reveal-halo] {
   pointer-events: none;
   opacity: 0;
 }
+
 .cs-candle {
   position: absolute;
   left: calc(50% + 60px);
@@ -191,9 +229,11 @@ h2[data-reveal-halo] {
   z-index: 10;
   touch-action: none;
 }
+
 .cs-candle:active {
   cursor: grabbing;
 }
+
 .cs-wick {
   position: absolute;
   top: -6px;
@@ -205,6 +245,7 @@ h2[data-reveal-halo] {
   border-radius: 1px;
   pointer-events: none;
 }
+
 .cs-flame {
   position: absolute;
   top: -30px;
@@ -219,6 +260,7 @@ h2[data-reveal-halo] {
   transform-origin: bottom center;
   filter: drop-shadow(0 0 6px rgba(255, 165, 0, 0.6));
 }
+
 .cs-glow {
   position: absolute;
   top: -50px;
@@ -230,6 +272,7 @@ h2[data-reveal-halo] {
   opacity: 0;
   pointer-events: none;
 }
+
 .cs-done {
   font-size: 0.85rem;
 }
