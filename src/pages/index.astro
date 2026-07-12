@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import LifeCard from '../components/LifeCard.astro';
-import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
+import Layout from "../layouts/Layout.astro";
+import LifeCard from "../components/LifeCard.astro";
+import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
 ---
 
 <Layout>
@@ -10,15 +10,28 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
   >
     <div class="hero-bg native-parallax" data-speed="0.4"></div>
     <div class="hero-arch native-parallax" data-speed="0.1"></div>
-    <div class="container position-relative z-3 native-parallax" data-speed="-0.2">
+    <div
+      class="container position-relative z-3 native-parallax"
+      data-speed="-0.2"
+    >
       <h1 class="display-1" data-reveal>Kirikla Monastery</h1>
-      <h2 class="display-6" data-reveal>The only Orthodox men's monastery in Estonia</h2>
+      <h2 class="display-6" data-reveal>
+        The only Orthodox men's monastery in Estonia
+      </h2>
       <p class="lead py-3 max-w-prose mx-auto" data-reveal>
-        A living place of prayer, work, and monastic community, rooted in the tradition of Mount Athos.
+        A living place of prayer, work, and monastic community, rooted in the
+        tradition of Mount Athos.
       </p>
-      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-reveal>
-        <a href="#donate" class="btn btn-primary px-4 py-2">Support the Monastery</a>
-        <a href="#visiting" class="btn btn-outline-light px-4 py-2">Visit the Monastery</a>
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+        data-reveal
+      >
+        <a href="#donate" class="btn btn-primary px-4 py-2"
+          >Support the Monastery</a
+        >
+        <a href="#visiting" class="btn btn-outline-light px-4 py-2"
+          >Visit the Monastery</a
+        >
       </div>
     </div>
   </header>
@@ -26,45 +39,64 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
   <main class="container max-w-content py-5 my-5" id="main-content">
     <section id="intro" class="fs-5 text-center mb-5" data-reveal>
       <p>
-        Kirikla Monastery was founded in <span class="scramble-text" data-scramble="2025">2025</span> under the guidance of Bishop Damaskinos of Haapsalu, a member of the
-        brotherhood of Xenophontos Monastery on Mount Athos. The monastery is home to a small brotherhood of monks
-        who have dedicated their lives to prayer and service to God.
+        Kirikla Monastery was founded in <span
+          class="scramble-text"
+          data-scramble="2025">2025</span
+        > under the guidance of Bishop Damaskinos of Haapsalu, a member of the brotherhood
+        of Xenophontos Monastery on Mount Athos. The monastery is home to a small
+        brotherhood of monks who have dedicated their lives to prayer and service
+        to God.
       </p>
-      <p>Visitors, pilgrims, and friends of the monastery are always welcome.</p>
+      <p>
+        Visitors, pilgrims, and friends of the monastery are always welcome.
+      </p>
     </section>
 
     <div class="divider"></div>
 
-    <section id="history" class="py-5 my-4 text-center lh-lg" data-reveal>
+    <section id="history" class="py-5 my-4 text-center lh-lg">
       <h2 class="display-2 mb-4" data-reveal-halo>Our History</h2>
-      <p class="text-start">
-        For centuries, the Petseri (Pskov-Pechory) Monastery served as the spiritual center of Estonia's Orthodox
-        Christians. After independence, the monastery remained on the Russian side of the border, and monastic life
-        within the Estonian Orthodox Church came to an end.
+      <p class="text-start" data-reveal>
+        For centuries, the Petseri (Pskov-Pechory) Monastery served as the
+        spiritual center of Estonia's Orthodox Christians. After independence,
+        the monastery remained on the Russian side of the border, and monastic
+        life within the Estonian Orthodox Church came to an end.
       </p>
-      <p class="text-start">
-        In 2024, Hieromonk Damaskinos, a member of the brotherhood of Xenophontos Monastery on Mount Athos, was
-        elected Bishop of Haapsalu, bringing with him a deep wish to establish a men's monastery and carry the
-        spiritual tradition of Mount Athos to Estonia.
+      <p class="text-start" data-reveal>
+        In 2024, Hieromonk Damaskinos, a member of the brotherhood of
+        Xenophontos Monastery on Mount Athos, was elected Bishop of Haapsalu,
+        bringing with him a deep wish to establish a men's monastery and carry
+        the spiritual tradition of Mount Athos to Estonia.
       </p>
-      <p class="text-start">
-        In 2026, entrepreneur Urmas Sõõrumaa's generosity gave the brotherhood a home: a property in Kirikla, Harju
-        County, <span class="scramble-text" data-scramble="40">40</span> kilometres from Tallinn. Until construction is complete, the brotherhood lives temporarily at the
-        nearby Üiso Farm, which now houses the monastery chapel and living quarters.
+      <p class="text-start" data-reveal>
+        In 2026, entrepreneur Urmas Sõõrumaa's generosity gave the brotherhood a
+        home: a property in Kirikla, Harju County, <span
+          class="scramble-text"
+          data-scramble="40">40</span
+        > kilometres from Tallinn. Until construction is complete, the brotherhood
+        lives temporarily at the nearby Üiso Farm, which now houses the monastery
+        chapel and living quarters.
       </p>
-      <p class="text-start">
-        In 2025, the first monk of the brotherhood, Father Paisios, was tonsured, ordained to the diaconate in 2026.
-        A second brother has since joined as a novice.
+      <p class="text-start" data-reveal>
+        In 2025, the first monk of the brotherhood, Father Paisios, was
+        tonsured, ordained to the diaconate in 2026. A second brother has since
+        joined as a novice.
       </p>
-      <p class="text-start">
-        <em>We pray that God will bless the growth of this young brotherhood and bring the monastery to completion.</em></p>
+      <p class="text-start" data-reveal>
+        <em
+          >We pray that God will bless the growth of this young brotherhood and
+          bring the monastery to completion.</em>
+      </p>
     </section>
 
     <div class="divider"></div>
 
     <section id="life" class="py-5 my-4 text-center" data-reveal>
       <h2 class="display-2 mb-4" data-reveal-halo>Life at the Monastery</h2>
-      <p class="text-center mb-5">In a monastery, the day is divided into three parts: prayer, work, and rest.</p>
+      <p class="text-center mb-5">
+        In a monastery, the day is divided into three parts: prayer, work, and
+        rest.
+      </p>
 
       <img
         src="https://images.unsplash.com/photo-1613906031335-d2f3fa3a4602?fm=jpg&q=10&w=1000&auto=format&fit=crop"
@@ -72,22 +104,23 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
         class="img-fluid rounded w-100 object-fit-cover mb-5 native-parallax"
         style="max-height: 400px;"
         data-speed="0.1"
-        loading="lazy" decoding="async"
+        loading="lazy"
+        decoding="async"
       />
 
       <div class="row g-4 mb-5 text-start perspective-parent">
         <div class="col-md-4">
           <LifeCard title="Prayer">
             <BookOpen slot="icon" size={20} />
-            Both communal and private, practiced in one's own cell and in the earliest hours of morning, when night
-            is considered the best time to seek God.
+            Both communal and private, practiced in one's own cell and in the earliest
+            hours of morning, when night is considered the best time to seek God.
           </LifeCard>
         </div>
         <div class="col-md-4">
           <LifeCard title="Work">
             <Hammer slot="icon" size={20} />
-            Sustains the monastery and teaches the meaning of effort, from cleaning, kitchen, and garden work to
-            icon painting and construction.
+            Sustains the monastery and teaches the meaning of effort, from cleaning,
+            kitchen, and garden work to icon painting and construction.
           </LifeCard>
         </div>
         <div class="col-md-4">
@@ -99,8 +132,9 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
       </div>
 
       <p class="px-lg-5 text-center">
-        Kirikla Monastery is coenobitic, a communal life where no one holds private property, and the monastery
-        provides for all. The brotherhood is like a family: bound by mutual love, obedience, and a shared calling
+        Kirikla Monastery is coenobitic, a communal life where no one holds
+        private property, and the monastery provides for all. The brotherhood is
+        like a family: bound by mutual love, obedience, and a shared calling
         that traces its roots to Mount Athos.
       </p>
     </section>
@@ -110,9 +144,10 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
     <section id="visiting" class="py-5 my-4 text-center" data-reveal>
       <h2 class="display-2" data-reveal-halo>Visiting</h2>
       <p class="max-w-prose mx-auto mb-4">
-        Monasteries are places of spiritual retreat. You are welcome to come and see the chapel, enjoy the
-        surroundings, or simply rest for a while. The monastery does not yet have regular opening hours, but we are
-        always glad to welcome visitors by prior arrangement.
+        Monasteries are places of spiritual retreat. You are welcome to come and
+        see the chapel, enjoy the surroundings, or simply rest for a while. The
+        monastery does not yet have regular opening hours, but we are always
+        glad to welcome visitors by prior arrangement.
       </p>
     </section>
   </main>
@@ -123,29 +158,40 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
         <div class="col-lg-6">
           <h2 class="mb-4" data-reveal-halo>Support the Brotherhood</h2>
           <p class="mb-4">
-            Since the monks give up their possessions and dedicate their entire lives to serving God, donations are
-            essential to covering the daily needs of the monastery. Kirikla Monastery also has major construction
-            projects ahead that will require significant funds. We are grateful for every donation, whether large or
-            small.
+            Since the monks give up their possessions and dedicate their entire
+            lives to serving God, donations are essential to covering the daily
+            needs of the monastery. Kirikla Monastery also has major
+            construction projects ahead that will require significant funds. We
+            are grateful for every donation, whether large or small.
           </p>
 
           <div class="mb-4 p-3 gold-glass rounded">
-            <h3 class="card-title h6 text-primary mb-2">Estonian Bank Details</h3>
+            <h3 class="card-title h6 text-primary mb-2">
+              Estonian Bank Details
+            </h3>
             <ul class="list-unstyled m-0 small">
-              <li><strong>Beneficiary:</strong> Eesti Apostlik-Õigeusu Kiriku Püha Mäe Isade Püha Klooster Kiriklas</li>
+              <li>
+                <strong>Beneficiary:</strong> Eesti Apostlik-Õigeusu Kiriku Püha Mäe
+                Isade Püha Klooster Kiriklas
+              </li>
             </ul>
           </div>
 
           <div class="mb-4 p-3 gold-glass rounded">
-            <h3 class="card-title h6 text-primary mb-2">For Donors in the United States</h3>
+            <h3 class="card-title h6 text-primary mb-2">
+              For Donors in the United States
+            </h3>
             <p class="m-0 small">
-              Donate through "Friends of Lintuvuori Co." (tax-exempt in the USA), supporting monastic life and
-              Athonite spirituality in Finland and Estonia.
+              Donate through "Friends of Lintuvuori Co." (tax-exempt in the
+              USA), supporting monastic life and Athonite spirituality in
+              Finland and Estonia.
             </p>
           </div>
 
           <div class="candle-game mt-4 mb-3" aria-hidden="true">
-            <p class="small text-primary mb-2" id="candle-prompt">Drag the candle onto the stand to light it</p>
+            <p class="small text-primary mb-2" id="candle-prompt">
+              Drag the candle onto the stand to light it
+            </p>
             <div class="candle-stage">
               <div class="cs-stand" id="cs-stand">
                 <div class="cs-holder"></div>
@@ -160,9 +206,19 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
                 <div class="cs-wick"></div>
               </div>
             </div>
-            <p class="small text-primary cs-done d-none text-center" id="candle-lit-msg">Your light burns for the brotherhood</p>
+            <p
+              class="small text-primary cs-done d-none text-center"
+              id="candle-lit-msg"
+            >
+              Your light burns for the brotherhood
+            </p>
           </div>
-          <a href="/" id="donate-btn" class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto">Donate Now</a>
+          <a
+            href="/"
+            id="donate-btn"
+            class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto"
+            >Donate Now</a
+          >
         </div>
         <div class="col-lg-6">
           <img
@@ -171,7 +227,8 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
             class="img-fluid rounded w-100 object-fit-cover shadow-lg native-parallax"
             style="min-height: 400px;"
             data-speed="0.1"
-            loading="lazy" decoding="async"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -184,9 +241,13 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
         <div class="col-md-6">
           <h2 class="mb-3">Kirikla Monastery</h2>
           <address class="small fst-normal opacity-75 mb-3">
-            Eesti Apostlik-Õigeusu Kiriku Püha Mäe Isade Püha Klooster Kiriklas<br />Estonia
+            Eesti Apostlik-Õigeusu Kiriku Püha Mäe Isade Püha Klooster Kiriklas<br
+            />Estonia
           </address>
-          <a href="https://www.facebook.com/profile.php?id=61585727948362" class="text-decoration-none small d-inline-flex align-items-center gap-2 text-muted">
+          <a
+            href="https://www.facebook.com/profile.php?id=61585727948362"
+            class="text-decoration-none small d-inline-flex align-items-center gap-2 text-muted"
+          >
             <Link size={16} /> Follow Kirikla Monastery on Facebook
           </a>
         </div>
@@ -194,14 +255,19 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from '@lucide/astro';
     </div>
   </footer>
 
-  <a href="#" id="back-to-top" class="btn btn-primary back-to-top" aria-label="Back to top">
+  <a
+    href="#"
+    id="back-to-top"
+    class="btn btn-primary back-to-top"
+    aria-label="Back to top"
+  >
     <ArrowUp size={20} />
   </a>
 
   <script>
-    import '../lib/reveal.js';
-    import '../lib/parallax.js';
-    import '../lib/tilt3d.js';
-    import '../lib/candle.js';
+    import "../lib/reveal.js";
+    import "../lib/parallax.js";
+    import "../lib/tilt3d.js";
+    import "../lib/candle.js";
   </script>
 </Layout>
