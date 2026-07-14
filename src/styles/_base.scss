@@ -31,3 +31,15 @@ body {
   color: white;
   z-index: 111;
 }
+
+dialog {
+  border: none;
+  max-width: 90vw;
+  width: 400px;
+  color: $body-color;
+  background: $secondary;
+
+  &::backdrop {
+    background: rgba($dark, 0.7);
+  }
+}

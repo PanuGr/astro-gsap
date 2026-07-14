@@ -182,7 +182,7 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
 
     <section id="visiting" class="py-5 my-4 text-center" data-reveal>
       <h2 class="display-2" data-reveal-halo>Visiting</h2>
-      <p class="max-w-prose mx-auto mb-4">
+      <p class="max-w-prose mx-auto">
         Monasteries are places of spiritual retreat. You are welcome to come and
         see the chapel, enjoy the surroundings, or simply rest for a while. The
         monastery does not yet have regular opening hours, but we are always
@@ -191,7 +191,7 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
     </section>
   </main>
 
-  <section id="donate" class="bg-secondary py-5" data-reveal>
+  <section id="donate" class="bg-secondary pb-5" data-reveal>
     <div class="container max-w-content py-5">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
@@ -252,11 +252,11 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
               Your light burns for the brotherhood
             </p>
           </div>
-          <a
-            href="/"
+          <button
+            type="button"
             id="donate-btn"
             class="btn btn-primary pulse-btn px-5 py-2 w-100 w-sm-auto"
-            >Donate Now</a
+            >Donate Now</button
           >
         </div>
         <div class="col-lg-6">
@@ -273,6 +273,15 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
       </div>
     </div>
   </section>
+
+  <dialog id="donate-dialog" class="gold-glass p-4 rounded text-center">
+    <p class="mb-3">
+      Thank you for your support. This is a demo, no real transaction was made.
+    </p>
+    <button type="button" class="btn btn-primary" data-close-dialog
+      >Close</button
+    >
+  </dialog>
 
   <footer class="bg-dark py-5 border-top border-dark-subtle">
     <div class="container max-w-content py-4">

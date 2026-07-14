@@ -65,6 +65,16 @@ import { ArrowUp } from "@lucide/astro";
       };
       buttonUp.onclick = () => window.scrollTo(0, 0);
 
+      const donateBtn = document.querySelector("#donate-btn");
+      const donateDialog = document.querySelector("#donate-dialog");
+      donateBtn?.addEventListener("click", () => donateDialog.showModal());
+      donateDialog
+        ?.querySelector("[data-close-dialog]")
+        .addEventListener("click", () => donateDialog.close());
+      
+        donateDialog?.addEventListener("click", (e) => {
+        if (e.target === donateDialog) donateDialog.close();
+      });
       import "../lib/reveal.js";
       import "../lib/parallax.js";
       import "../lib/tilt3d.js";
