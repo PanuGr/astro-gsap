@@ -43,3 +43,7 @@ dialog {
     background: rgba($dark, 0.7);
   }
 }
+
+#donate {
+  scroll-margin-top: -3rem; // pulls heading up toward viewport top because there's a lot of padding on this section
+}
