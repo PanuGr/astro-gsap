@@ -49,7 +49,7 @@
 .hero-bg {
   position: absolute;
   inset: -30%; // huge extra space for parallax scrubbing
-  background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('banner-2700.avif');
+  background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('/banner-2700.avif');
   background-position: center;
   background-size: cover;
   z-index: -3;

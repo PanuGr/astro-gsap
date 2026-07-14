@@ -12,8 +12,12 @@ function initCardTilt() {
       const setRotX = gsap.quickTo(card, 'rotationX', { duration: 0.3, ease: 'power2.out' });
       const setRotY = gsap.quickTo(card, 'rotationY', { duration: 0.3, ease: 'power2.out' });
 
+      let rect = card.getBoundingClientRect();
+      const updateRect = () => rect = card.getBoundingClientRect();
+      window.addEventListener('resize', updateRect);
+      window.addEventListener('scroll', updateRect, { passive: true });
+
       card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         const hw = rect.width / 2;
