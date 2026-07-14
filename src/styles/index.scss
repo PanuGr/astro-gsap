@@ -41,7 +41,7 @@
     inset: 0;
     width: 200%;
     z-index: -1;
-    background: linear-gradient(135deg, rgba($body-bg, 0.9) 0%, rgba($primary, 0.15) 50%, rgba($body-bg, 0.9) 100%);
+    background: linear-gradient(135deg, rgba($body-bg, 0.9) 0%, rgba($primary, 0.2) 50%, rgba($body-bg, 0.9) 100%);
     animation: light-shaft 15s infinite ease-in-out;
   }
 }
@@ -49,7 +49,7 @@
 .hero-bg {
   position: absolute;
   inset: -30%; // huge extra space for parallax scrubbing
-  background-image: linear-gradient(rgba(15, 27, 46, 0.75), rgba(15, 27, 46, 0.85)), url('https://images.unsplash.com/photo-1602376531381-e2bc41a27f74?fm=avif&q=10&w=1600');
+  background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('banner-2700.avif');
   background-position: center;
   background-size: cover;
   z-index: -3;
