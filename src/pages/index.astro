@@ -15,9 +15,7 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
       data-speed="-0.2"
     >
       <h1 class="display-1" data-reveal>Kirikla Klooster</h1>
-      <h2 data-reveal>
-        The only Orthodox men's monastery in Estonia
-      </h2>
+      <h2 data-reveal>The only Orthodox men's monastery in Estonia</h2>
       <p class="lead py-3 max-w-prose mx-auto" data-reveal>
         A living place of prayer, work, and monastic community, rooted in the
         tradition of Mount Athos.
@@ -39,10 +37,10 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
   <main class="container max-w-content py-5 my-5" id="main-content">
     <section id="intro" class="fs-5 text-center mb-5" data-reveal>
       <p>
-        Kirikla Monastery was founded in <strong>2025</strong> under the guidance of Bishop Damaskinos of Haapsalu, a member of the brotherhood
-        of Xenophontos Monastery on Mount Athos. The monastery is home to a small
-        brotherhood of monks who have dedicated their lives to prayer and service
-        to God.
+        Kirikla Monastery was founded in <strong>2025</strong> under the guidance
+        of Bishop Damaskinos of Haapsalu, a member of the brotherhood of Xenophontos
+        Monastery on Mount Athos. The monastery is home to a small brotherhood of
+        monks who have dedicated their lives to prayer and service to God.
       </p>
       <p>
         Visitors, pilgrims, and friends of the monastery are always welcome.
@@ -67,9 +65,10 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
       </p>
       <p class="text-start" data-reveal>
         In 2026, entrepreneur Urmas Sõõrumaa's generosity gave the brotherhood a
-        home: a property in Kirikla, Harju County, <strong>40</strong> kilometres from Tallinn. Until construction is complete, the brotherhood
-        lives temporarily at the nearby Üiso Farm, which now houses the monastery
-        chapel and living quarters.
+        home: a property in Kirikla, Harju County, <strong>40</strong> kilometres
+        from Tallinn. Until construction is complete, the brotherhood lives temporarily
+        at the nearby Üiso Farm, which now houses the monastery chapel and living
+        quarters.
       </p>
       <p class="text-start" data-reveal>
         In 2025, the first monk of the brotherhood, Father Paisios, was
@@ -79,25 +78,34 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
       <p class="text-start" data-reveal>
         <em
           >We pray that God will bless the growth of this young brotherhood and
-          bring the monastery to completion.</em>
+          bring the monastery to completion.</em
+        >
       </p>
 
       <div class="row g-4 mt-4 justify-content-center">
         <div class="col-6 col-md-4" data-reveal>
           <div class="stat-block">
-            <span class="scramble-text display-3 text-primary" data-scramble="2025">2025</span>
+            <span
+              class="scramble-text display-3 text-primary"
+              data-scramble="2025">2025</span
+            >
             <small>Year founded</small>
           </div>
         </div>
         <div class="col-6 col-md-4" data-reveal>
           <div class="stat-block">
-            <span class="scramble-text display-3 text-primary" data-scramble="40">40</span><small>km</small>
+            <span
+              class="scramble-text display-3 text-primary"
+              data-scramble="40">40</span
+            ><small>km</small>
             <small>from Tallinn</small>
           </div>
         </div>
         <div class="col-6 col-md-4" data-reveal>
           <div class="stat-block">
-            <span class="scramble-text display-3 text-primary" data-scramble="2">2</span>
+            <span class="scramble-text display-3 text-primary" data-scramble="2"
+              >2</span
+            >
             <small>Brothers</small>
           </div>
         </div>
@@ -270,7 +278,12 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
     </div>
   </footer>
 
-  <div id="custom-cursor" class="custom-cursor d-none d-lg-block" aria-hidden="true"></div>
+  <div
+    id="custom-cursor"
+    class="custom-cursor d-none d-lg-block"
+    aria-hidden="true"
+  >
+  </div>
 
   <a
     href="#"
@@ -282,6 +295,17 @@ import { BookOpen, Hammer, Moon, Link, ArrowUp } from "@lucide/astro";
   </a>
 
   <script>
+    const buttonUp = document.querySelector("#back-to-top");
+
+    window.onscroll = function (e) {
+      if (window.scrollY > 600) {
+        buttonUp.style.visibility = "visible";
+      } else {
+        buttonUp.style.visibility = "hidden";
+      }
+    };
+    buttonUp.onclick = () => window.scrollTo(0, 0);
+
     import "../lib/reveal.js";
     import "../lib/parallax.js";
     import "../lib/tilt3d.js";

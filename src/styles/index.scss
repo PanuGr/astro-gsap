@@ -297,13 +297,7 @@ h2[data-reveal-halo] {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 1020;
+  visibility: hidden;
   width: 44px;
   height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
 }
