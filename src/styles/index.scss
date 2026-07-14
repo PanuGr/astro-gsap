@@ -54,6 +54,10 @@
   background-size: cover;
   z-index: -3;
   will-change: transform;
+
+  @media (max-width: 1200px) {
+    background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('/banner-1700.avif');
+  }
 }
 
 // Ambient drift — slow idle movement before user scrolls (same technique as light-shaft)
