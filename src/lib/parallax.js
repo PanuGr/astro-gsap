@@ -1,56 +1,66 @@
 function initNativeParallax() {
-  const elements = Array.from(document.querySelectorAll('.native-parallax')).map(el => {
-    return { 
-      el, 
-      initialCenter: 0, 
-      speed: parseFloat(el.getAttribute('data-speed')) || 0 
-    };
-  });
+  const elements = Array.from(document.querySelectorAll('.native-parallax')).map(el => ({
+    el,
+    initialCenter: 0,
+    speed: parseFloat(el.dataset.speed) || 0
+  }));
 
   if (!elements.length) return;
-
-  function calculateCenters() {
-    elements.forEach(item => item.el.style.transform = 'none');
-    elements.forEach(item => {
-      const rect = item.el.getBoundingClientRect();
-      item.initialCenter = rect.top + window.scrollY + (rect.height / 2);
-    });
-  }
-
-  calculateCenters();
 
   let ticking = false;
   let lastWidth = window.innerWidth;
 
+  function calculateCenters() {
+    elements.forEach(item => {
+      const rect = item.el.getBoundingClientRect();
+
+      // Document-space center of the element.
+      // Assumes the element is not already translated when initialized.
+      item.initialCenter = window.scrollY + rect.top + rect.height / 2;
+    });
+  }
+
   function update() {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const viewportCenter = scrollY + (windowHeight / 2);
+    const viewportCenter = window.scrollY + window.innerHeight / 2;
 
     elements.forEach(({ el, initialCenter, speed }) => {
-      const distance = viewportCenter - initialCenter;
-      const yPos = distance * speed;
-      el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+      const offset = (viewportCenter - initialCenter) * speed;
+      el.style.transform = `translate3d(0, ${offset}px, 0)`;
     });
 
     ticking = false;
   }
 
-  window.addEventListener('scroll', () => {
+  function requestUpdate() {
     if (!ticking) {
-      window.requestAnimationFrame(update);
       ticking = true;
+      requestAnimationFrame(update);
     }
-  }, { passive: true });
+  }
+
+  calculateCenters();
+  update();
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth === lastWidth) return; // address-bar height shift, not a real resize
+    // Ignore mobile address-bar height changes.
+    if (window.innerWidth === lastWidth) return;
+
     lastWidth = window.innerWidth;
     calculateCenters();
     update();
   });
 
-  update();
+  // Recalculate if element sizes change (images, fonts, etc.)
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(() => {
+      calculateCenters();
+      requestUpdate();
+    });
+
+    elements.forEach(({ el }) => observer.observe(el));
+  }
 }
 
 initNativeParallax();
