@@ -48,15 +48,20 @@
 
 .hero-bg {
   position: absolute;
-  inset: -30%; // huge extra space for parallax scrubbing
-  background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('/banner-2700.avif');
-  background-position: center;
-  background-size: cover;
+  inset: -30%; // extra space for parallax scrub
+  width: 160%; // compensate inset for object-fit cover
+  height: 160%;
+  object-fit: cover;
+  object-position: center;
   z-index: -3;
+}
 
-  @media (max-width: 1200px) {
-    background-image: linear-gradient(rgba($body-bg, 0.5), rgba($body-bg, 0.5)), url('/banner-1700.avif');
-  }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba($body-bg, 0.5);
+  z-index: -3;
+  pointer-events: none;
 }
 
 // Ambient drift — slow idle movement before user scrolls (same technique as light-shaft)
