@@ -20,6 +20,7 @@ function initNativeParallax() {
   calculateCenters();
 
   let ticking = false;
+  let lastWidth = window.innerWidth;
 
   function update() {
     const scrollY = window.scrollY;
@@ -43,6 +44,8 @@ function initNativeParallax() {
   }, { passive: true });
 
   window.addEventListener('resize', () => {
+    if (window.innerWidth === lastWidth) return; // address-bar height shift, not a real resize
+    lastWidth = window.innerWidth;
     calculateCenters();
     update();
   });
