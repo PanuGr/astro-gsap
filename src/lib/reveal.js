@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 
 gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
+ScrollTrigger.normalizeScroll(true); // fixes mobile address-bar viewport
 
 function initSurfaces() {
   const mm = gsap.matchMedia();
