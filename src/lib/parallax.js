@@ -44,10 +44,10 @@ function initNativeParallax() {
 
   window.addEventListener('resize', () => {
     calculateCenters();
-    //update();
+    update();
   });
 
-  //update();
+  update();
 }
 
 initNativeParallax();
