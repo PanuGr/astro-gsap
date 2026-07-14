@@ -2,8 +2,14 @@
   navigation: auto;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   interpolate-size: allow-keywords;
+
 }
 
 body {

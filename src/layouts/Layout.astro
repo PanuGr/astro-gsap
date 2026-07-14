@@ -1,6 +1,7 @@
 ---
 import "../styles/index.scss";
 import { Font } from "astro:assets";
+import { ArrowUp } from "@lucide/astro";
 ---
 
 <html lang="en">
@@ -53,7 +54,38 @@ import { Font } from "astro:assets";
     <a href="#main-content" class="visually-hidden-focusable"
       >Skip to main content</a
     >
-
+    <a
+      href="#"
+      id="back-to-top"
+      class="btn btn-primary back-to-top"
+      aria-label="Back to top"
+    >
+      <ArrowUp size={20} />
+    </a>
+    <div
+      id="custom-cursor"
+      class="custom-cursor d-none d-sm-block"
+      aria-hidden="true"
+    >
+    </div>
     <slot />
+    <script>
+      const buttonUp = document.querySelector("#back-to-top");
+
+      window.onscroll = function (e) {
+        if (window.scrollY > 600) {
+          buttonUp.style.visibility = "visible";
+        } else {
+          buttonUp.style.visibility = "hidden";
+        }
+      };
+      buttonUp.onclick = () => window.scrollTo(0, 0);
+
+      import "../lib/reveal.js";
+      import "../lib/parallax.js";
+      import "../lib/tilt3d.js";
+      import "../lib/candle.js";
+      import "../lib/cursor.js";
+    </script>
   </body>
 </html>
