@@ -287,21 +287,6 @@ h2[data-reveal-halo] {
   font-size: 0.85rem;
 }
 
-// Custom cursor
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid $primary;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  opacity: 0; // Starts hidden, GSAP reveals it if pointer: fine
-  transform: translate(0, 0); // GSAP quickTo hook
-}
-
 // Back to top
 .back-to-top {
   position: fixed;

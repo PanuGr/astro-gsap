@@ -46,12 +46,6 @@ import { ArrowUp } from "@lucide/astro";
     >
       <ArrowUp size={20} />
     </a>
-    <div
-      id="custom-cursor"
-      class="custom-cursor d-none d-sm-block"
-      aria-hidden="true"
-    >
-    </div>
     <slot />
     <script>
       const buttonUp = document.querySelector("#back-to-top");
@@ -79,7 +73,6 @@ import { ArrowUp } from "@lucide/astro";
       import "../lib/parallax.js";
       import "../lib/tilt3d.js";
       import "../lib/candle.js";
-      import "../lib/cursor.js";
     </script>
   </body>
 </html>

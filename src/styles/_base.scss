@@ -15,6 +15,14 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: Verdana, system-ui;
+  cursor: url('/circle-outline.svg'), auto;
+}
+
+a,
+button,
+.btn,
+#donate-btn {
+  cursor: url('/circle-hover.svg'), auto;
 }
 
 :focus-visible {
