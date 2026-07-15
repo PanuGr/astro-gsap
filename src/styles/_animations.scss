@@ -1,5 +1,3 @@
-// CSS-side companions for GSAP ScrollTrigger reveals.
-// GSAP sets initial state via .js; these are the transition/easing hooks JS drives.
 [data-reveal] {
   will-change: opacity, transform;
 }
@@ -7,7 +5,6 @@
 .btn {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   position: relative;
-  /* Ensure hover transition doesn't clip ::before */
   z-index: 1;
 }
 

@@ -138,7 +138,7 @@ h2[data-reveal-halo] {
   perspective: 800px;
 }
 
-// Surfaces: Stained-glass & Candlelight[cite: 2]
+// Surfaces:
 .stained-glass {
   background-color: rgba($secondary, 0.4);
   backdrop-filter: blur(12px);
@@ -151,7 +151,7 @@ h2[data-reveal-halo] {
   border: 1px solid rgba($primary, 0.2) !important;
 }
 
-// Signature moment — drag candle onto stand, flame ignites
+// Signature moment
 .candle-game {
   user-select: none;
 }
